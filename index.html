@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Натяжные потолки в Краснодаре | +79034477341</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo"><i class="fas fa-layer-group"></i> Потолок</div>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-contacts">
+                <a href="tel:+79034477341" class="phone-number">+7 (903) 447-73-41</a>
+                <button class="btn btn-primary" onclick="openModal()">Заказать звонок</button>
+            </div>
+            <div class="mobile-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container hero-wrapper">
+            <div class="hero-text fade-in-section">
+                <h1>Натяжные потолки в Краснодаре</h1>
+                <p>Качество по доступной цене. Установим за 1 день. Чистый монтаж без пыли и запаха.</p>
+                <div class="hero-features">
+                    <div><i class="fas fa-check-circle"></i> Качественные полотна</div>
+                    <div><i class="fas fa-check-circle"></i> Безопасное оборудование</div>
+                </div>
+            </div>
+            <div class="hero-form-card fade-in-section">
+                <h3>Оставить заявку</h3>
+                <form onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Телефон" required 
+                               pattern="[0-9]{10,12}" 
+                               oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Получить звонок</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-title fade-in-section"><h2>Наши услуги</h2><span></span></div>
+            <div class="services-grid">
+                <div class="service-card fade-in-section">
+                    <div class="service-img s1"></div>
+                    <div class="service-content">
+                        <h3>Матовые потолки</h3>
+                        <p>Классический вид идеально ровной побелки.</p>
+                        <button class="btn btn-primary" onclick="openModal()">Заказать</button>
+                    </div>
+                </div>
+                <div class="service-card fade-in-section">
+                    <div class="service-img s2"></div>
+                    <div class="service-content">
+                        <h3>Глянцевые потолки</h3>
+                        <p>Визуально увеличивают пространство комнаты.</p>
+                        <button class="btn btn-primary" onclick="openModal()">Заказать</button>
+                    </div>
+                </div>
+                <div class="service-card fade-in-section">
+                    <div class="service-img s3"></div>
+                    <div class="service-content">
+                        <h3>Многоуровневые</h3>
+                        <p>Сложные конструкции и зонирование светом.</p>
+                        <button class="btn btn-primary" onclick="openModal()">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages">
+        <div class="container">
+            <div class="section-title fade-in-section"><h2>Почему выбирают нас</h2><span></span></div>
+            <div class="advantages-wrapper fade-in-section">
+                <div class="advantage-item">
+                    <i class="fas fa-rocket advantage-icon"></i>
+                    <h4>Быстрый монтаж</h4>
+                    <p>Установка простого потолка занимает всего 2-3 часа.</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-leaf advantage-icon"></i>
+                    <h4>Качество</h4>
+                    <p>Используем только сертифицированные материалы.</p>
+                </div>
+                <div class="advantage-item">
+                    <i class="fas fa-tools advantage-icon"></i>
+                    <h4>Опытные мастера</h4>
+                    <p>Монтажники с опытом работы более 10 лет.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title fade-in-section"><h2>Наши работы</h2><span></span></div>
+            <div class="gallery-grid fade-in-section">
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="5377479916124836012.jpg"><div class="overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="5377479916124836013.jpg"><div class="overlay"><i class="fas fa-search-plus"></i></div></div>
+                <div class="gallery-item" onclick="openLightbox(this)"><img src="5377479916124836014.jpg"><div class="overlay"><i class="fas fa-search-plus"></i></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <div class="container">
+            <div class="contact-single fade-in-section">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+79034477341" class="phone-link">+7 (903) 447-73-41</a>
+                <div class="social-links">
+                    <a href="https://t.me/+79034477341" target="_blank" class="tg-link">
+                        <i class="fab fa-telegram"></i> Написать в Telegram
+                    </a>
+                </div>
+                <p>Звоните или пишите в мессенджеры для быстрого расчета цены</p>
+                <button class="btn btn-primary" onclick="openModal()">Заказать звонок</button>
+            </div>
+            <footer style="margin-top: 50px; padding-bottom: 20px; opacity: 0.7; text-align: center;">
+                <p>© 2026 Потолок Краснодар.</p>
+            </footer>
+        </div>
+    </section>
+
+    <div id="modal-callback" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModalBtn()">×</span>
+            <h3 style="text-align: center; margin-bottom: 20px;">Заказать звонок</h3>
+            <form onsubmit="submitForm(event)">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Ваш телефон" required 
+                           pattern="[0-9]{10,12}" 
+                           oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-thanks" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" style="text-align: center; position: relative;">
+            <span class="close-modal" onclick="document.getElementById('modal-thanks').style.display='none'">×</span>
+            <i class="fas fa-check-circle" style="font-size: 4rem; color: #ff9800; margin-bottom: 20px;"></i>
+            <h2>Спасибо за заявку!</h2>
+            <p style="margin-top: 10px;">Мы свяжемся с вами в ближайшее время.</p>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="close-lightbox" onclick="closeLightbox(event)">×</span>
+        <img class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
